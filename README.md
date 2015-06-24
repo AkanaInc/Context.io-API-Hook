@@ -10,18 +10,18 @@
 - API Documentation: [Context.io API docs] (https://context.io/how-it-works/api-overview)
 
 ### Pre-Reqs
-- you must install the com.soa.pso.policy.OAuth1.0.0.zip nto the <Policy Manager Home>/sm70 directory. This will result in files placed in the sm70/lib/soa-pso-policy-OAuth1.0.0 subdirectory
-    + restart ND(s) only
-    +  Using the SOA Admin Console, on each ND:
+- You must install the com.soa.pso.policy.OAuth1.0.0.zip nto the <Policy Manager Home>/sm70 directory. This will result in files placed in the sm70/lib/soa-pso-policy-OAuth1.0.0 subdirectory
+    +  Restart ND(s) only
+    +  Using the Akana Admin Console, on each ND:
         * select the OAuth1 Token Policy Support feature  
         * press the "install" button
         * follow the install wizard instructions and restart the ND
 - Register the application in the [Context.io Developers Console] (https://context.io/how-it-works/api-overview). Ensuring that you have registered and logged in.
-- Click the "Accounts" tab, then the "add a Lite account" button, on the top right.
-- follow the steps to define the email account your app/account will utilise
-- once the account is defined, click on the "settings" tab, and the "API keys and Libraries" button.
-- If you haven't already been asked, you'll be taken through the process of generating an App ID, App Key, and App Secret. If you have, the App Key, and App Secret will be displayed. Copy them for the set up of the security policy later.
-- sign out of the console 
+    - Click the "Accounts" tab, then the "add a Lite account" button, on the top right.
+    - Follow the steps to define the email account your app/account will utilise
+    - Once the account is defined, click on the "settings" tab, and the "API keys and Libraries" button.
+    - If you haven't already been asked, you'll be taken through the process of generating an App ID, App Key, and App Secret. If you have, the App Key, and App Secret will be displayed. Copy them for the set up of the security policy later.
+    - Sign out of the console 
 
 ### Getting Started Instructions
 #### Download and Import
@@ -30,10 +30,10 @@
     - the container key is found by going to the "Deatils Tab" of the ND cluster, or ND defined in the Policy Manager Console, then looking at the " Container Overview" tab on that page, and copying the "Container Key:" value. ![container key screenshot](https://github.com/pogo61/Google-Sheets-API-Integration/blob/master/Screen%20Shot%202015-03-18%20at%2011.24.45%20am.png "ND Container Key")
 - Login to PolicyManager  example: http://localhost:9900
 - Select the root "Registry" organisation and click on the "Import Package" from the Actions navigation window on the right side of the screen
-  - click on button to browse for the Context.ioLiteAPIHook.zip archive file 
-  - make sure select the migrations.properties file 
-  - click Okay to start the importation of the hook.
-- this will create a Context.io Lite API Hook Organisation with the requisite artefacts needed to run the API.
+  - Click on button to browse for the Context.ioLiteAPIHook.zip archive file. 
+  - Make sure select the migrations.properties file.
+  - Click Okay to start the importation of the hook.
+- This will create a Context.io Lite API Hook Organisation with the requisite artefacts needed to run the API.
 
 #### Verify Import
 - Expand the services folder in the Context.io Lite API Hook you imported and find Context.io_Lite_API_Helloworld VS
@@ -55,7 +55,9 @@
 #### Verify Connectivity
 - Using curl http://"URL of the Listener of your ND"/contextio_hook/helloworld
 -  the response should be similar to the below, listing your user details:  
-    ```[
+  
+     ```
+    [
             {
                 "created": 1426733556,
                 "email_accounts": [
